@@ -12,7 +12,7 @@ Start a new repo locally, create a remote one with the GitHub CLI (gh), and link
 
 Command	Definition
 git init	Initializes a new Git repository in the current directory.
-gh repo create <name>	Creates a new GitHub repo (requires GitHub CLI).
+gh repo create my-project --public --source=. --remote=origin --push
 git remote add origin <repo_url>	Links your local repo to the remote. (Usually done by gh)
 git push -u origin <branch>	Pushes commits to the remote repo and sets upstream tracking.
 git clone <repo_url>	Copies a remote repository locally.

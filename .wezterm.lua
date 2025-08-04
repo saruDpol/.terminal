@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 
 local solarized_osaka = {
 	foreground = "#d0d0d0",
-	background = "#00141a",
+	background = "#01121a",
 }
 
 return {
