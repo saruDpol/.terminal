@@ -3,33 +3,6 @@ local wezterm = require("wezterm")
 local solarized_osaka = {
 	foreground = "#d0d0d0",
 	background = "#00141a",
-	cursor_bg = "#d0d0d0",
-	cursor_border = "#d0d0d0",
-	-- cursor_fg = "#1a1b26",
-	-- selection_bg = "#33467c",
-	-- selection_fg = "#c0caf5",
-	--
-	-- ansi = {
-	-- 	"#1a1b26", -- black
-	-- 	"#f7768e", -- red
-	-- 	"#9ece6a", -- green
-	-- 	"#e0af68", -- yellow
-	-- 	"#7aa2f7", -- blue
-	-- 	"#bb9af7", -- magenta
-	-- 	"#7dcfff", -- cyan
-	-- 	"#a9b1d6", -- white
-	-- },
-	--
-	-- brights = {
-	-- 	"#414868", -- black (bright)
-	-- 	"#f7768e", -- red
-	-- 	"#9ece6a", -- green
-	-- 	"#e0af68", -- yellow
-	-- 	"#7aa2f7", -- blue
-	-- 	"#bb9af7", -- magenta
-	-- 	"#7dcfff", -- cyan
-	-- 	"#c0caf5", -- white
-	-- },
 }
 
 return {

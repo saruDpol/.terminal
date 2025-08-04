@@ -23,6 +23,16 @@ alias ebash="vim ~/.bashrc"
 alias ubash="source ~/.bashrc"
 alias root="cd ~"
 alias cl="clear && ll"
+
+git() {
+  if [[ "$1" == "rm" ]]; then
+    shift
+    command git rm --cached "$@"
+  else
+    command git "$@"
+  fi
+}
+
 net() {
     local brave_path="C:/Users/ptorn/AppData/Local/BraveSoftware/Brave-Browser/Application/brave.exe"
     case "$1" in

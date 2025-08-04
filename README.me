@@ -7,11 +7,14 @@ git config --global user.name "Your Name"	Sets your name globally for all reposi
 git config --global user.email "you@example.com"	Sets your email globally.
 git config --list	Shows current Git configuration.
 
-📂 2. Repository Initialization & Cloning
-These commands help start a new repo or copy an existing one.
+📂 2. Repository Initialization, Creating & Linking Remote
+Start a new repo locally, create a remote one with the GitHub CLI (gh), and link them together.
 
 Command	Definition
 git init	Initializes a new Git repository in the current directory.
+gh repo create <name>	Creates a new GitHub repo (requires GitHub CLI).
+git remote add origin <repo_url>	Links your local repo to the remote. (Usually done by gh)
+git push -u origin <branch>	Pushes commits to the remote repo and sets upstream tracking.
 git clone <repo_url>	Copies a remote repository locally.
 
 📈 3. Basic Snapshotting
@@ -55,6 +58,22 @@ git reset --hard <commit>	Resets to a specific commit and discards all changes.
 git revert <commit>	Creates a new commit that undoes changes from a previous commit.
 git clean -fd	Removes untracked files and directories.
 
+🚫 7. Excluding a File from Tracking After It Has Been Committed
+How to stop tracking a file that was already committed (and optionally ignore it going forward).
+
+Command	Definition
+git rm --cached <file>	Removes the file from Git’s index (stops tracking) but leaves it in your working directory.
+git commit -m "Stop tracking <file>"	Records the removal of the file from tracking.
+Add <file> or pattern to .gitignore	Prevents Git from showing this file as untracked in future.
+
+Notes:
+
+**Adding a file to .gitignore does NOT stop tracking if the file is already committed.**
+
+You must git rm --cached it first to untrack it.
+
+After that, Git will ignore the file based on .gitignore.
+
 🕵️ 7. Viewing History
 See the project history and inspect changes.
 
@@ -71,3 +90,6 @@ Command	Definition
 git stash	Saves uncommitted changes temporarily.
 git stash pop	Reapplies the most recent stashed changes.
 git stash list	Shows all stashed changes.
+
+
+
